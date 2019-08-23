@@ -86,6 +86,9 @@ div.base-card .gender.male::before{
 div.base-card .gender.female::before{
     background: var(--graph-blue);
 }
+div.base-card .gender.female::before{
+    background: #dfeec0;
+}
 .tabled{
     width: 460px;
 }
@@ -112,15 +115,29 @@ div.base-card .gender.female::before{
 .bar:first-child{
     margin-left: 0;
 }
-.tabled .lines{
+.graph{
+    height: 319px;
     position: absolute;
 }
-.tabled .lines .line{
-    width: 100%;
-    height: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1)
+.graph .lines{
+    position: absolute;
 }
-
+.graph .lines .line{
+    width: 405px;
+    height: 53px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.graph .lines .line::before{
+    content: '100';
+    position: absolute;
+    top: -13px;
+    left: -43px;
+    margin-bottom: 53px;
+    font-size: 12px;
+    color: #000;
+    opacity: .3;
+}
 .horizontal .progress-track {
     position: relative;
     width: 100%;
@@ -144,4 +161,18 @@ div.base-card .gender.female::before{
   .rounded .progress-fill {
     border-radius: 3px;
     box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  }
+  .bar-box{
+    width: 60px;
+    height: 20px;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    background: #323232
+  }
+  .bars-width{
+    width: 418px;
+    top: 151px;
+    position: relative;
+    left: 102px;
   }
